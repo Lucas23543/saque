@@ -1,0 +1,25 @@
+from conta import Conta
+
+conta = Conta(2306, "Lucas", 23000, 3000)
+conta.extrato()
+
+conta.sacar(600)
+conta.extrato()
+conta.sacar(7400)
+conta.extrato()
+conta.deposita(15000)
+conta.extrato()
+
+saque_Ok = conta.sacar(30000)
+
+if (saque_Ok):
+    print("Saque Efetuado Com Sucesso!")
+else:
+    print("Saldo Insuficiente")
+conta.extrato()
+
+realidade = Conta(345, "Mais Ou Menos", 100, 5)
+sonho = Conta(987, "Top", 5000, 750)
+
+sonho.tranferir(realidade, 4000)
+realidade.extrato()
